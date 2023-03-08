@@ -62,3 +62,7 @@ if ("serviceWorker" in navigator) {
       .catch(err => console.log("service worker not registered", err));
   });
 }
+
+app.get("/ServiceWorker.js", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "public", "ServiceWorker.js"));
+});
